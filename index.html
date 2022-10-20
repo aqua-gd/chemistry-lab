@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemistryLab</title>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/icon.webp">
+</head>
+
+<body>
+    <div class="menu">
+        <ul class="list-menu">
+            <li class="item-menu">
+                <label for="btnMouse">
+                    <input type="radio" id="btnMouse" class="input-add-atom" name="select-btn" checked>
+                    <div class="btn-icon" id="cursorBox">
+                        <img src="./images/cursor.png" class="icon-nav">
+                    </div>
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addHydrogen">
+                    <input type="radio" id="addHydrogen" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_hydrogen.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addCarbon">
+                    <input type="radio" id="addCarbon" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_carbon.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addNitrogen">
+                    <input type="radio" id="addNitrogen" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_nitrogen.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addOxygen">
+                    <input type="radio" id="addOxygen" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_oxygen.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addPhosphorus">
+                    <input type="radio" id="addPhosphorus" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_phosphorus.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addSulfur">
+                    <input type="radio" id="addSulfur" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_sulfur.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addBromine">
+                    <input type="radio" id="addBromine" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_bromo.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addYodo">
+                    <input type="radio" id="addYodo" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_yodo.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addFluor">
+                    <input type="radio" id="addFluor" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_fluor.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addLitio">
+                    <input type="radio" id="addLitio" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_litio.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="addCloro">
+                    <input type="radio" id="addCloro" class="input-add-atom" name="select-btn">
+                    <img src="./images/atom_cloro.png" class="btn-icon">
+                </label>
+            </li>
+
+            <li class="item-menu">
+                <label for="btnDelete">
+                    <input type="radio" id="btnDelete" class="input-add-atom" name="select-btn">
+                    <img src="./images/eraser.png" class="btn-icon">
+                </label>
+            </li>
+            <li class="item-menu">
+                <label for="btnClearAll">
+                    <input type="button" id="btnClearAll" class="input-add-atom">
+                    <img src="./images/trash.png" class="btn-icon">
+                </label>
+            </li>
+
+            <li class="item-menu">
+                <label for="btnTheme">
+                    <input type="button" id="btnTheme" class="input-add-atom">
+                    <div class="btn-icon">
+                        <img id="imgTheme" src="./images/theme_light.png" class="btn-icon">
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <canvas id="canvas1"></canvas>
+    <script src="./scripts/config.js"></script>
+    <script src="./scripts/objects.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/events.js"></script>
+</body>
+
+</html>
