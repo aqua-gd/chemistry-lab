@@ -2,7 +2,7 @@
   "name": "chemstry-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.html",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

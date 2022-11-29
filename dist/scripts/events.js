@@ -57,7 +57,7 @@ function createAtom(atom, x, y) {
     listOfAtoms.push(new Atom(atom.name, atom.symbol, atom.size, atom.color, atom.textColor, x, y));
 }
 canvas.addEventListener('click', (e) => {
-    if (e.clientY > 64 && mouse.btn !== 'btnMouse')
+    if (e.clientY > 64 && mouse.btn !== 'btnMouse' && mouse.btn !== 'btnDelete')
         createAtom(atomStorage[mouse.btn], e.clientX, e.clientY);
 });
 // EVENT TO CLEAR ALL --------------------------------------------------------------------------------

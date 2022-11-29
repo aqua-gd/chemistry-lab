@@ -61,7 +61,7 @@ function createAtom(atom: Atom, x: number, y: number): void {
 }
 
 canvas.addEventListener('click', (e) => {
-  if(e.clientY > 64 && mouse.btn !== 'btnMouse') createAtom(atomStorage[mouse.btn], e.clientX, e.clientY)
+  if(e.clientY > 64 && mouse.btn !== 'btnMouse' && mouse.btn !== 'btnDelete') createAtom(atomStorage[mouse.btn], e.clientX, e.clientY)
 })
 
 // EVENT TO CLEAR ALL --------------------------------------------------------------------------------

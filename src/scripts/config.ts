@@ -18,7 +18,7 @@ const env = {
 }
 
 // SET DEFAULT THEME --------------------------------------------------------------------------------
-imgTheme.src = localStorage.getItem('theme') === 'Dark' ? './images/theme_dark.png' : './images/theme_light.png'
+imgTheme.src = localStorage.getItem('theme') === 'Dark' ? './dist/images/theme_dark.png' : './dist/images/theme_light.png'
 
 if (!localStorage.getItem('theme')) {
   localStorage.setItem('theme', 'Default')
@@ -28,10 +28,10 @@ if (!localStorage.getItem('theme')) {
 btnTheme.addEventListener('click', () => {
   if (localStorage.getItem('theme') === 'Dark') {
       init('Default', '#eee', '#000')
-      imgTheme.src = './images/theme_light.png'
+      imgTheme.src = './dist/images/theme_light.png'
   } else {
       init('Dark', '#000', '#eee')
-      imgTheme.src = './images/theme_dark.png'
+      imgTheme.src = './dist/images/theme_dark.png'
   }
 })
 
