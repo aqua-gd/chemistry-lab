@@ -1,0 +1,24 @@
+{
+  "name": "chemstry-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqua-gd/chemistry-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aqua-gd/chemistry-lab/issues"
+  },
+  "homepage": "https://github.com/aqua-gd/chemistry-lab",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
