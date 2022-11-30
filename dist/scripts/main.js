@@ -2,8 +2,6 @@
 // TODO:
 // Expand the canvas
 // AutoSave in localStorage
-// Let export JSON file
-// Let import JSON file
 // UPDATE SIZE CANVAS & THEME
 function init(theme, background, lineColor) {
     canvas.width = window.innerWidth;
@@ -39,5 +37,3 @@ function connect() {
         });
     });
 }
-init(localStorage.getItem('theme') || '', env.background, env.lineColor);
-animate();

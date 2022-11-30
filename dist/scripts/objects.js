@@ -28,6 +28,7 @@ const listOfBtns = [
     { obj: getById('addChlorine'), name: 'addChlorine' },
     { obj: getById('btnDelete'), name: 'btnDelete' }
 ];
+document.getElementById('btnMouse')?.click();
 for (const btn of listOfBtns) {
     btn.obj.addEventListener('click', () => {
         mouse.btn = btn.name;

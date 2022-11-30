@@ -1,11 +1,9 @@
 // TODO:
 // Expand the canvas
 // AutoSave in localStorage
-// Let export JSON file
-// Let import JSON file
 
 // UPDATE SIZE CANVAS & THEME
-function init(theme: string, background: string, lineColor: string) {
+function init(theme: string, background: string, lineColor: string): void {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 
@@ -16,7 +14,7 @@ function init(theme: string, background: string, lineColor: string) {
 }
 
 // UPDATE ANIMATION FRAMES
-function animate() {
+function animate(): void {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   connect()
   listOfAtoms.forEach(atom => {
@@ -26,7 +24,7 @@ function animate() {
 }
 
 // DRAW LINES TO CONECT ATOMS
-function connect() {
+function connect(): void{
   listOfAtoms.forEach(atom1 => {
     listOfAtoms.forEach(atom2 => {
       let distance: number = Math.hypot((atom1.x - atom2.x), atom1.y - atom2.y)
@@ -42,6 +40,3 @@ function connect() {
     })
   })
 }
-
-init(localStorage.getItem('theme') || '', env.background, env.lineColor)
-animate()

@@ -1,4 +1,9 @@
 "use strict";
+// INIT THE APP ----------------------------------------------------------------------
+window.addEventListener('DOMContentLoaded', () => {
+    init(localStorage.getItem('theme') || '', env.background, env.lineColor);
+    animate();
+});
 // EVENT TO MOVE ATOMS WITH MOUSE ----------------------------------------------------------------------
 window.addEventListener('mousedown', (e) => {
     mouse.click = true;
@@ -17,11 +22,11 @@ window.addEventListener('mousemove', (e) => {
         }
     }
 });
-window.addEventListener('mouseup', (e) => {
+window.addEventListener('mouseup', () => {
     mouse.click = false;
     mouse.select = '';
 });
-window.addEventListener('mouseout', (e) => {
+window.addEventListener('mouseout', () => {
     mouse.click = false;
     mouse.select = '';
 });
@@ -44,11 +49,11 @@ canvas.addEventListener('touchmove', (e) => {
         }
     }
 });
-canvas.addEventListener('touchend', (e) => {
+canvas.addEventListener('touchend', () => {
     mouse.click = false;
     mouse.select = '';
 });
-canvas.addEventListener('touchcancel', (e) => {
+canvas.addEventListener('touchcancel', () => {
     mouse.click = false;
     mouse.select = '';
 });
@@ -63,4 +68,29 @@ canvas.addEventListener('click', (e) => {
 // EVENT TO CLEAR ALL --------------------------------------------------------------------------------
 btnClearAll.addEventListener('click', () => {
     listOfAtoms.splice(0, listOfAtoms.length);
+});
+// EVENT TO DOWNLOAD JSON --------------------------------------------------------------------------------
+btnDownloadJson.addEventListener('click', () => {
+    if (listOfAtoms.length > 0) {
+        let downloadElem = document.createElement('a');
+        downloadElem.href = URL.createObjectURL(new Blob([JSON.stringify(listOfAtoms)], { type: 'json' }));
+        downloadElem.download = 'drawing.json';
+        downloadElem.click();
+    }
+});
+// EVENT TO UPLOAD JSON --------------------------------------------------------------------------------
+btnUploadJson.addEventListener('change', (e) => {
+    let fileReader = new FileReader();
+    fileReader.onload = () => {
+        let content = fileReader.result;
+        let newListOfAtoms = JSON.parse(content?.toString() || '');
+        listOfAtoms.splice(0, listOfAtoms.length);
+        newListOfAtoms.forEach((elem) => {
+            listOfAtoms.push(new Atom(elem.name, elem.symbol, elem.size, elem.color, elem.textColor, elem.x, elem.y));
+        });
+    };
+    let target = e.target;
+    let file = target.files[0];
+    if (file)
+        fileReader.readAsText(file);
 });
